@@ -5,15 +5,19 @@ Load the data
 activity_data<-read.csv("D://Coursera//activity.csv")
 Process/transform the data (if necessary) into a format suitable for your analysis
 totalStepsperday<-aggregate(steps~date,data=activity_data,sum,na.rm=TRUE)
+
 What is mean total number of steps taken per day?
 
 Make a histogram of the total number of steps taken each day
+
 hist(totalStepsperday$steps,xlab="Total steps per day",main="Histogram of Total Steps per Day")
 Calculate and report the mean and median total number of steps taken per day
 mean(totalStepsperday$steps)
 median(totalStepsperday$steps)
+
 The mean total number of steps taken per day is r mean(totalStepsperday$steps) steps.
 The median total number of steps taken per day is r median(totalStepsperday$steps) steps.
+
 What is the average daily activity pattern?
 
 Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
