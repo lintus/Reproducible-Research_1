@@ -24,7 +24,7 @@ What is mean total number of steps taken per day?
 hist(totalStepsperday$steps, xlab = "Total steps per day", main = "Histogram of Total Steps per Day")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-3](Figures/unnamed-chunk-3.png) 
 
 
 * Calculate and report the **mean** and **median** total number of steps taken 
@@ -63,7 +63,7 @@ stepsInterval <- aggregate(steps ~ interval, data = activity_data, mean, na.rm =
 plot(steps ~ interval, data = stepsInterval, type = "l")
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](Figures/unnamed-chunk-5.png) 
 
 
 * Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps? 
@@ -133,7 +133,7 @@ totalSteps2 <- aggregate(steps ~ date, data = activityFilled, sum)
 hist(totalSteps2$steps, xlab = "Total steps per day", main = "Histogram of Total Steps per Day")
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
+![plot of chunk unnamed-chunk-10](Figures/unnamed-chunk-10.png) 
 
 ```r
 mean(totalSteps2$steps)
@@ -183,5 +183,5 @@ xyplot(steps ~ interval | factor(day), data = stepsInterval2, aspect = 1/2,
     type = "l")
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12.png) 
+![plot of chunk unnamed-chunk-12](Figures/unnamed-chunk-12.png) 
 
